@@ -160,7 +160,7 @@ void WebRTCSignalingHandler::sendIceCandidate(const string &sessionId, int sdpML
         {"type", "ice_candidate"},
         {"candidate", {
             {"candidate", candidate},
-            {"sdpMlineIndex", sdpMLineIndex}
+            {"sdpMLineIndex", sdpMLineIndex}
         }}
     };
     loop->defer([this, sessionId, payload = msg.dump()]() {
